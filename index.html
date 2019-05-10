@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Audio Player</title>
+  </head>
+  <body>
+    <div class="audio-player-cont">
+      <div class="logo">
+        <img src="Favorites/icons8-music-96.png" />
+      </div>
+      <div class="player">
+        <div id="songTitle" class="song-title">
+          Song title goes here Song title goes here Song goes here
+        </div>
+        <input
+          id="songSlider"
+          class="song-slider"
+          type="range"
+          min="0"
+          step="1"
+          onchange="seekSong()"
+        />
+        <div>
+          <div id="currentTime" class="current-time">00:00</div>
+          <div id="duration" class="duration">00:00</div>
+        </div>
+        <div class="controllers">
+          <img
+            src="favorites/icons8-skip-to-start-50.png"
+            alt="previous"
+            width="30px"
+            onclick="previous();"
+          />
+          <img
+            src="favorites/icons8-rewind-50.png"
+            alt="previous"
+            width="30px"
+            onclick="decreasePlaybackRate();"
+          />
+          <img
+            src="favorites/icons8-play-50.png"
+            alt="previous"
+            width="40px"
+            onclick="playOrPauseSong(this);"
+          />
+          <img
+            src="favorites/icons8-fast-forward-50.png"
+            alt="previous"
+            width="30px"
+            onclick="increasePlaybackRate();"
+          />
+          <img
+            src="favorites/icons8-end-50.png"
+            alt="previous"
+            width="30px"
+            onclick="next();"
+          />
+          <img src="favorites/icons8-audio-down-50.png" width="15px" alt="" />
+          <input
+            id="volumeSlider"
+            class="volume-slider"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            onchange="adjustVolume()"
+          />
+          <img
+            src="favorites/icons8-audio-50.png"
+            width="15px"
+            style="margin-left: 2px;"
+            alt=""
+          />
+        </div>
+        <div id="nextSong" class="song-title">
+          <strong>Next Song:</strong> Next Song title goes here...
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <footer>Music by <a href="https://www.bensound.com">Bensound</a></footer>
+  </body>
+</html>
